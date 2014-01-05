@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html><head>  
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+<title>Example open.ui5.me.date.SimpleDateDropDown</title>  
+
+<!--Standard sapui5 init-->
+<script id="sap-ui-bootstrap" 
+    src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" 
+    data-sap-ui-theme="sap_bluecrystal"
+    data-sap-ui-libs="sap.m,sap.ui.commons"></script> 
+
+
+<script> 
+var app = new sap.m.App({initialPage:"openui5-SimpleDateDropDown"});
+app.placeAt("content");
+
+var pageContent = new sap.m.Page("openui5-SimpleDateDropDown",{title:"OpenUI5-SimpleDateDropDown"});
+
+//Example of usage of the components in this section
+sap.ui.localResources("open.ui5");
+jQuery.sap.require("open.ui5.me.date.SimpleDateDropDown");
+
+var simpleDateDropDownContainer = new open.ui5.me.date.SimpleDateDropDown("MySimpleDateDropDown",{day:"31", month:"1", year:"1987"});
+
+pageContent.addContent(simpleDateDropDownContainer);
+app.addPage(pageContent);
+</script>
+
+</head>
+<body class="sapUiBody">
+    <div id="content"></div>
+</body>
+</html>

@@ -67,9 +67,8 @@ sap.ui.core.Control.extend("open.ui5.me.date.SimpleDateDropDown", {
     		this.setDay(nDay);
     	}
 
-    	
+   		dt.setDate(1);    	
 		dt.setMonth(oMonth);
-   		dt.setDate(1);
 		dt = new Date(dt - 1);
 		var pDay = dt.getDate();
     	
